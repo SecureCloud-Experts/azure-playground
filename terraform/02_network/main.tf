@@ -17,7 +17,7 @@ module "vd_network" {
   # route_table_disable_bgp_route_propagation = var.azure_route_table_disable_bgp_route_propagation
   virtual_network_name                                                  = "vnet-${var.environment_prefix}"
   virtual_network_subnet_names                                          = var.azure_virtual_network_subnet_names
-  virtual_network_subnet_enforce_private_link_endpoint_network_policies = true
+  virtual_network_subnet_enforce_private_link_endpoint_network_policies = "Enabled"
   virtual_network_subnet_service_endpoints                              = ["Microsoft.Storage"]
   virtual_network_dns_servers                                           = var.azure_virtual_network_dns_servers
   virtual_network_address_space                                         = var.azure_virtual_network_address_space

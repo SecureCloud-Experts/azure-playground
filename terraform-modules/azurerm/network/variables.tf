@@ -29,8 +29,8 @@ variable "virtual_network_subnet_names" {
 }
 
 variable "virtual_network_subnet_enforce_private_link_endpoint_network_policies" {
-  type    = bool
-  default = false
+  type    = string
+  default = "Disabled"
 }
 
 variable "virtual_network_subnet_service_endpoints" {
@@ -60,7 +60,7 @@ variable "route_table_name" {
 
 variable "route_table_disable_bgp_route_propagation" {
   type    = bool
-  default = false
+  default = true
 }
 
 variable "route_table_routes" {
